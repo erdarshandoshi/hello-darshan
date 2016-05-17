@@ -6,7 +6,7 @@ body {
 	font-size: 14px;
 	color: #061C37;
 	background-color: #FCFBEF;
-	background-image:url(images/background.png);
+	background-image:url(../images/background.png);
 	background-repeat:repeat-x;
 }
 *
@@ -60,7 +60,7 @@ color:#F2D76A;
  
 #menu
 {
-background-image:url(images/menu.jpg);
+background-image:url(../images/menu.jpg);
 background-repeat:no-repeat;
 width:940px;
 height:69px;
