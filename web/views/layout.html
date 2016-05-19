@@ -204,8 +204,16 @@ $(".btnsubmit").click(function(){
 	if(searchtxt!="")
 	{
 	var url="https://cdn.contentful.com/spaces/srih943s7prt/entries?access_token=8e99f3e47249d3cf172abba44ad78d06488a63381fd940de57b0b669abe08bd5&query="+searchtxt ;
-		 $.get(url, function(data, status){		  
+		 $.get(url, function(data, status){	
+		 var data2=Object.keys(data.items[0].fields);
+		 for(var i=0; i < Object.keys(data.items[0].fields).length; i++)
+		 {
+			var value = data.items[0].fields[i];
+			alert(value);
+		 }
+
 		var store=data.items[0].fields; 
+		
 		$.each(data, function (i,v)
 		{
 		  console.log(i,v);
@@ -218,14 +226,7 @@ $(".btnsubmit").click(function(){
 	
 	}
 });
-function json2array(json){
-    var result = [];
-    var keys = Object.keys(json);
-    keys.forEach(function(key){
-        result.push(json[key]);
-    });
-    return result;
-}
+ 
 
   </script>
 
