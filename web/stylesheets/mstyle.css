@@ -1,11 +1,11 @@
 
 @font-face {
     font-family: DINBold; /* deklarace fontu */
-    src: url("../font/DINBold.ttf"); /* propojenÃ­ na umÃ­stÄ›nÃ­ souboru */
+    src: url("http://www.agencyprojects.com/milbemax/font/DINBold.ttf"); /* propojenÃ­ na umÃ­stÄ›nÃ­ souboru */
 }
 @font-face {
     font-family: DINRegular; /* deklarace fontu */
-    src: url("../font/DINRegular.ttf"); /* propojenÃ­ na umÃ­stÄ›nÃ­ souboru */
+    src: url("http://www.agencyprojects.com/milbemax/font/DINRegular.ttf"); /* propojenÃ­ na umÃ­stÄ›nÃ­ souboru */
 }
 body, html{
     font-size: 16px;
