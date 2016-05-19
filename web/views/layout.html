@@ -1,48 +1,171 @@
-<!DOCTYPE html >
-<html >
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-<script>
-$(document).ready(function(){
-        $.get("https://cdn.contentful.com/spaces/srih943s7prt/entries/2uqPbypicAoKeCi20UoM2O?access_token=8e99f3e47249d3cf172abba44ad78d06488a63381fd940de57b0b669abe08bd5", function(data, status){
-			var store=data.fields.firstcontent;           
-			$(".contentful").html(store);
-        });  
-});
-</script>
-<link rel="stylesheet" type="text/css" href="/stylesheets/site.css" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sample Demo Website</title>
+        <meta name="viewport" content="width=device-width">
+
+      
+        <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/stylesheets/mstyle.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="favicon-1.png">
+
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="header-inner">
+                <div class="logo-box">
+                    <img src="img/logo-header.png" alt="" class="img-responsive header-logo" onclick="javascript:location.href = 'index.php'"/>
+                </div>
+                <img src="img/mobile-menu.png" alt="Menu" class="mobile-menu"/>
+                <ul class="main-menu">
+                    <li class="menuabout"><a href="#">Link 1</a></li>
+                    <li class="menuwhy"><a href="#">Link 2</a></li>
+                    <li class="menufaq"><a href="#">Link 3</a></li>
+                    <li class="menuworming"><a href="#">WORMING MADE EASY</a></li>
+                    <li class="menubuy"><a href="#">WHERE TO BUY</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+
+        <div class="rightbanner">
 
 
-<title>Sample Test Website</title>
-</head>
+        </div>
 
-<body>
-<div id="container">
-		<div id="mainpic">
-        	<h1>Sample <span class="lighter">Website</span></h1>
-            <h2> ** Darshan **</h2>
-        </div>    
-        <div id="menu">
-        	<ul>
-            	<li class="menuitem"><a href="#">Link 1</a></li>
-                <li class="menuitem"><a href="#">Link 2</a></li>
-                <li class="menuitem"><a href="#">Link 3</a></li>
-                <li class="menuitem"><a href="#">Link 4</a></li>
-                <li class="menuitem"><a href="#">Link 5</a></li>
-              <li class="menuitem"><a href="#">Link 6</a></li>
+
+
+<div class="scrollcontent">
+    <div class="homepageslider hidden-xs">
+        <div class="bxslidertop">
+            <ul class="bxslider">
+                <li>
+                    <img src="img/homepage-slider.jpg" alt=""/>
+                </li>
             </ul>
         </div>
-        
-		<div id="content" style="height:400px;">
-        	<div>Static Content Here</div>
-			<br/>
-			 <div><h1>Below data is coming from contentful</h1></div>
-			 <br/>
-			 <div class="contentful"></div>
-      </div>
-	   <div id="footer"><h3><a href="#">Copyrights Content here </a></h3></div>
-   </div>
+    </div>
+        <div class="homepageslider visible-xs">
+        <div class="bxslidertop">
+            <ul class="bxslider">
+                <li>
+                    <img src="img/homepage-slider-mobile.jpg" alt=""/>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+
+    <div class="homepagecontent">
+        <div class="container">
+            <img src="img/homepage-image01.png" alt="" class="img-responsive"/>
+            <div class="first-par">
+                Imus alibus, core, quati abor aut audi aboresequis id ullabo. Hiliqui tem. Itatio omnimil et ea sus.
+                Num fuga. Nequam, occabore pedit aut prae autae sequat unt unt odic temporiore verio offictusam eicienit quas ius asita
+                ame expliquo to et volorerae cullaborum reserate nosapid ea dolupti onsenditatem sum a quossus mollaces aut parumqui
+                dessincte lat volorum quodit, vel et aut rehent ut voluptaqui in comnihil ma doluptu ribere erspis none volupta dem ium re
+                conseque occum cum acea ne nime sit quae de non nuscillam, ommos eum, tem quam laboribus resti optatquatur?
+            </div>
+        </div>
+        <div class="second-par">
+            <h2>KEEPING YOUR PET HEALTHY WITH LOREM IPSUM</h2>
+            <p>
+                If your pet looks in good health, it’s easy to forget about worming them. But worms can be almost anywhere your pet goes – including your
+                home and garden. They pose a threat to your pet’s health and your family’s health too. That’s why you should know which dog worms or cat
+                worms your pet may be at risk from, and how you can protect them with LOREM IPSUM.
+            </p>
+            <p>
+                Learn more about LOREM IPSUM and why it might be the right worming treatment and protection for your pet.
+            </p>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<div class="content footer">
+    <div class="footer-container">
+        <div class="col-sm-8 col-xs-12">
+            <div class="footer-menu">
+                <h3>ABOUT</h3>
+                <div class="clearfix"></div>
+                <ul class="hidden-xs">
+                    <li><a href="">About Elanco</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Brands</a></li>
+                    <li><a href="">Our  Guarantee</a></li>
+                    <li><a href="">Reference Materials</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu hidden-xs">
+                <h3>PRIVACY</h3>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="footer-menu hidden-xs">
+                <h3>TRADEMARKS</h3>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="footer-menu hidden-xs">
+                <h3>TERM OF USE</h3>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="footer-menu visible-xs">
+                <h3>CONTACT US</h3>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="footer-menu footer-menu-last">
+                <h3>SITEMAP</h3>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-2 col-xs-12">
+            <h3>CONNECT WITH US</h3>
+            <div class="clearfix"></div>
+            <ul class="footer-social">
+                <li>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="img/social-icon01.png" alt=""/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="img/social-icon02.png" alt=""/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="img/social-icon03.png" alt=""/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>© 2016 Copyright Test Site | <a href="">Privacy Statement</a> | <a href="">Trademark</a> | <a href="">Terms of Use</a> | <a href="">Site Map</a></p>
+    <img src="img/footer-image.png" alt=""/>
+    <div class="clearfix"></div>
+</div>
+
 </body>
 </html>
+
