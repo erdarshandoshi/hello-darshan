@@ -96,7 +96,9 @@ $(document).ready(function(){
                 worms your pet may be at risk from, and how you can protect them with LOREM IPSUM.
             </p> 
             <div id="content" >
-        	<div>Static Content Here</div>
+        	<div>Search <input type="text" class="txtsrch">  <input class="btnsubmit" type="submit" value="Search"></div> <br/>
+			<div class="results"></div>
+			
 		
 			 <div><h1>Below data is coming from contentful</h1></div>
 			
@@ -195,6 +197,20 @@ $(document).ready(function(){
   });
   $('.mobile-menu').click(function () {
     $('.main-menu').toggle();
+});
+$(".btnsubmit").click(function(){
+    var searchtxt=$(".txtsrch").val();
+	
+	if(searchtxt!="")
+	{
+	var url="https://cdn.contentful.com/spaces/srih943s7prt/entries?access_token=8e99f3e47249d3cf172abba44ad78d06488a63381fd940de57b0b669abe08bd5&query="+searchtxt ;
+		 $.get(url, function(data, status){
+			var store=data.fields.firstcontent;           
+			$(".results").html(store);
+        });  
+	
+	
+	}
 });
   </script>
 
