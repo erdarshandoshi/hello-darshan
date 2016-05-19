@@ -206,11 +206,9 @@ $(".btnsubmit").click(function(){
 	var url="https://cdn.contentful.com/spaces/srih943s7prt/entries?access_token=8e99f3e47249d3cf172abba44ad78d06488a63381fd940de57b0b669abe08bd5&query="+searchtxt ;
 		 $.get(url, function(data, status){		  
 			var store=data.items[0].fields; 
-			var text = "";			
-			$.each($.parseJSON(store), function(key,value){
-				alert(value.url);
-				text += value.url + "<br>";
-			});
+			var array=json2array(data);
+			console.log(array);
+			 
 			 
 			$(".results").html(text);
         });  
@@ -218,6 +216,15 @@ $(".btnsubmit").click(function(){
 	
 	}
 });
+function json2array(json){
+    var result = [];
+    var keys = Object.keys(json);
+    keys.forEach(function(key){
+        result.push(json[key]);
+    });
+    return result;
+}
+
   </script>
 
 <script src="http://www.agencyprojects.com/milbemax/js/general.js" type="text/javascript"></script>
