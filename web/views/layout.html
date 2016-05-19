@@ -13,7 +13,14 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="/stylesheets/mstyle.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" href="favicon-1.png">
-
+<script>
+$(document).ready(function(){
+        $.get("https://cdn.contentful.com/spaces/srih943s7prt/entries/2uqPbypicAoKeCi20UoM2O?access_token=8e99f3e47249d3cf172abba44ad78d06488a63381fd940de57b0b669abe08bd5", function(data, status){
+			var store=data.fields.firstcontent;           
+			$(".contentful").html(store);
+        });  
+});
+</script>
     </head>
 
     <body>
@@ -85,6 +92,13 @@
             <p>
                 Learn more about LOREM IPSUM and why it might be the right worming treatment and protection for your pet.
             </p>
+            <div id="content" style="height:400px;">
+        	<div>Static Content Here</div>
+			<br/>
+			 <div><h1>Below data is coming from contentful</h1></div>
+			 <br/>
+			 <div class="contentful"></div>
+      </div>
         </div>
     </div>
 
@@ -162,7 +176,7 @@
 
 <div class="footer-bottom">
     <p>© 2016 Copyright Test Site | <a href="">Privacy Statement</a> | <a href="">Trademark</a> | <a href="">Terms of Use</a> | <a href="">Site Map</a></p>
-    <img src="img/footer-image.png" alt=""/>
+    
     <div class="clearfix"></div>
 </div>
 
