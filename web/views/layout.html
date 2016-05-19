@@ -206,7 +206,7 @@ $(".btnsubmit").click(function(){
 	var url="https://cdn.contentful.com/spaces/srih943s7prt/entries?access_token=8e99f3e47249d3cf172abba44ad78d06488a63381fd940de57b0b669abe08bd5&query="+searchtxt ;
 		 $.get(url, function(data, status){		  
 			var store=data.items[0].fields; 
-			var myArr = $.parseJSON(store);
+			var myArr = $.parseJSON(data);
 			 
 			 
 			$(".results").html(text);
